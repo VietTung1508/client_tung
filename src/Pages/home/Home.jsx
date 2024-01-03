@@ -9,9 +9,7 @@ const Home = () => {
   return (
     <div>
       <Banner />
-      <FeaturedProducts type={"trending"} />
       <Category />
-      <FeaturedProducts type={"featured"} />
       <BestSeller />
     </div>
   );

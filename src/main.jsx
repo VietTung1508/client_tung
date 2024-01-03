@@ -3,7 +3,6 @@ import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
 import App from "./App.jsx";
-import Home from "./pages/home/home.jsx";
 import Products from "./pages/Products/Products.jsx";
 import Admin from "./Pages/Admin/Admin.jsx";
 import Dashboard from "./Pages/Admin/Pages/Dashboard/Dashboard.jsx";
@@ -20,6 +19,8 @@ import NewProduct from "./Pages/Admin/Pages/NewProduct/NewProduct.jsx";
 import NewCategory from "./Pages/Admin/Pages/NewCategory/NewCategory.jsx";
 import NewCoupon from "./Pages/Admin/Pages/NewCoupon/NewCoupon.jsx";
 import Auth from "./Pages/Auth/Auth.jsx";
+import FeaturedProducts from "./components/FeaturedProducts/FeaturedProducts.jsx";
+import Home from "./Pages/home/Home.jsx";
 
 const router = createBrowserRouter([
   {
@@ -29,6 +30,10 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
+      },
+      {
+        path: "productss",
+        element: <FeaturedProducts />,
       },
       {
         path: "/products:id",

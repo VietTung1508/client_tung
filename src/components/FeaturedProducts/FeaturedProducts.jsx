@@ -1,34 +1,32 @@
-import React, {useEffect, useState} from 'react';
-import './FeaturedProducts.scss'
+import React, { useEffect, useState } from "react";
+import "./FeaturedProducts.scss";
 import Card from "../Card/Card.jsx";
+import axiosClient from "../../api/axiosClient.js";
 
-const FeaturedProducts = ({type}) => {
-    const [products, setProducts] = useState([]);
-    useEffect(() => {
-        fetch("products.json")
-            .then(res => res.json())
-            .then(data => {
-                setProducts(data)
-            })
-    }, [])
-    const News = products.filter((item) => item.status === "New Arrival");
-    console.log(News)
-    return (
-        <div className={'featuredProducts'}>
-            <div className="top">
-                <h1>{type} products</h1>
-                <p>Text</p>
-            </div>
-            <div className="bottom">
-                {
-                    News.map(item=>(
-                        <Card item={item} key={item.id}/>
-                    ))
-                }
+const FeaturedProducts = ({ type }) => {
+  const [products, setProducts] = useState([]);
 
-            </div>
-        </div>
-    );
+  useEffect(() => {
+    try {
+      const getProducts = async () => {
+        const res = await axiosClient.get("product/products");
+        setProducts(res.data);
+      };
+      getProducts();
+    } catch (e) {
+      console.log(e);
+    }
+  }, []);
+
+  console.log(products);
+
+  return (
+    <div className="cards">
+      {products.map((product) => (
+        <Card product={product} />
+      ))}
+    </div>
+  );
 };
 
 export default FeaturedProducts;
