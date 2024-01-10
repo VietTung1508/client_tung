@@ -31,12 +31,12 @@ const EditCouponModal = (props) => {
   return (
     <div className="coupon-edit-modal-wrapper">
       <div className="coupon-edit-modal">
-        <h1>Edit coupon</h1>
+        <h1>Sửa Mã Giảm Giá</h1>
         <form className="coupon-edit-form" onSubmit={handleUpdate}>
           <div className="form-box">
             <div className="form-box-info">
               <div className="form-box-info-item">
-                <label htmlFor="title">Title</label>
+                <label htmlFor="title">Tiêu đề</label>
                 <input
                   type="text"
                   name="title"
@@ -47,7 +47,7 @@ const EditCouponModal = (props) => {
                 />
               </div>
               <div className="form-box-info-item">
-                <label htmlFor="desc">Description</label>
+                <label htmlFor="desc">Mô tả</label>
                 <input
                   type="text"
                   name="desc"
@@ -57,7 +57,7 @@ const EditCouponModal = (props) => {
                 />
               </div>
               <div className="form-box-info-item">
-                <label htmlFor="percentage">Percentage</label>
+                <label htmlFor="percentage">Phần Trăm</label>
                 <input
                   type="text"
                   name="percentage"
@@ -75,10 +75,10 @@ const EditCouponModal = (props) => {
                 className="btn-cancle"
                 type="button"
               >
-                Cancel
+                Hủy
               </button>
               <button type="submit" className="btn-save" onClick={handleUpdate}>
-                Save
+                Lưu
               </button>
             </div>
           </div>

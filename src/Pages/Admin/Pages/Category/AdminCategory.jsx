@@ -21,18 +21,17 @@ const AdminCategory = () => {
 
   const columns = [
     { field: "_id", headerName: "ID", flex: 1 },
-    { field: "title", headerName: "Category Title", flex: 1 },
-    { field: "tag", headerName: "Category Tag", flex: 1 },
+    { field: "title", headerName: "Tiêu Đề Danh Mục", flex: 1 },
+    { field: "tag", headerName: "Tag Danh Mục", flex: 1 },
   ];
 
   return (
     <div className="categoryPage">
       <div className="action">
         <div className="header">
-          <h2 className="title">Catergories</h2>
+          <h2 className="title">Danh Mục</h2>
           <h3 className="desc">
-            This website has <span>{categories.length} </span>categories
-            available
+            Website này có <span>{categories.length} </span>danh mục
           </h3>
         </div>
         <button
@@ -41,7 +40,7 @@ const AdminCategory = () => {
             navigate("/admin/categories/new");
           }}
         >
-          New Category
+          Thêm Danh Mục
           <span className="icon">
             <TiPlus />
           </span>

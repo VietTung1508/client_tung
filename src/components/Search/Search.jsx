@@ -29,8 +29,6 @@ const Search = () => {
     e.preventDefault();
   };
 
-  console.log(searchResult);
-
   return (
     <div className="search_wrapper">
       <form className="search" onSubmit={handleSubmitSearch}>
@@ -45,11 +43,23 @@ const Search = () => {
       {searchResult && searchKey && (
         <div className="results_container">
           {searchResult.map((rs) => (
-            <Link to={`/products/${rs.title}`}>
-              <div className="result">
+            <Link to={`/products?category=${rs.title}`}>
+              <div
+                className="result"
+                onClick={() => {
+                  setSearchKey("");
+                }}
+              >
                 <GoSearch className="icon" />
                 <h3>
-                  {rs.title} - {rs.tag}
+                  {rs.title} -{" "}
+                  {rs.tag == "men"
+                    ? "Nam"
+                    : rs.tag == "women"
+                    ? "Nữ"
+                    : rs.tag == "kid"
+                    ? "Trẻ Em"
+                    : "Unisex"}
                 </h3>
               </div>
             </Link>

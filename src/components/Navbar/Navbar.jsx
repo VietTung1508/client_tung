@@ -6,6 +6,7 @@ import "./Navbar.scss";
 import Search from "../Search/Search";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
+import Cart from "../Cart/Cart";
 
 const Navbar = () => {
   const user = useSelector((state) => state.user.user);
@@ -18,16 +19,19 @@ const Navbar = () => {
             <MdOutlineFavoriteBorder className="icon" />
             <h3>Yêu thích</h3>
           </div>
-          <div className="action">
-            <RiShoppingBag3Line className="icon" />
-            <h3>Giỏ hàng ({0})</h3>
-          </div>
-          <Link to={user ? "/profile" : "/auth"}>
+          <Link to={user ? "/account" : "/auth"}>
             <div className="action">
               <LuUser2 className="icon" />
-              <h3>{user ? user.user.username : "Đăng nhập"}</h3>
+              <h3>{user ? "Tài khoản của tôi" : "Đăng nhập"}</h3>
             </div>
           </Link>
+          <div className="action isCart">
+            <RiShoppingBag3Line className="icon" />
+            <h3>Giỏ hàng ({0})</h3>
+            <div className="cart">
+              <Cart />
+            </div>
+          </div>
         </div>
       </div>
       <div className="sub_nav">

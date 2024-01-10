@@ -16,19 +16,19 @@ function AdminOrder() {
   }, []);
   const columns = [
     { field: "id", headerName: "ID", flex: 1 },
-    { field: "products", headerName: "Products", flex: 3 },
-    { field: "user", headerName: "User", flex: 2 },
-    { field: "payment", headerName: "Payment", flex: 2 },
-    { field: "total", headerName: "Total", flex: 1 },
+    { field: "products", headerName: "Sản Phẩm", flex: 3 },
+    { field: "user", headerName: "Người Dùng", flex: 2 },
+    { field: "payment", headerName: "Thanh Toán", flex: 2 },
+    { field: "total", headerName: "Tổng Tiền", flex: 1 },
   ];
 
   return (
     <div className="orderPage">
       <div className="action">
         <div className="header">
-          <h2 className="title">Orders</h2>
+          <h2 className="title">Đơn Hàng</h2>
           <h3 className="desc">
-            This website has <span>{orders.length} </span>orders available
+            Website này có <span>{orders.length} </span> đơn hàng
           </h3>
         </div>
       </div>

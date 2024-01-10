@@ -10,38 +10,39 @@ const Featured = () => {
   return (
     <div className="featured">
       <div className="top">
-        <h1 className="title">Total Revenue</h1>
+        <h1 className="title">Doanh Thu</h1>
         <IoMdMore />
       </div>
       <div className="bottom">
         <div className="featuredChart">
           <CircularProgressbar value={70} text="70%" strokeWidth={4} />
         </div>
-        <p className="title">Total sales made today</p>
-        <p className="amount">$ 200</p>
+        <p className="title">Tổng doanh thu trong ngày</p>
+        <p className="amount">1.200.000 đ</p>
         <p className="desc">
-          Previous transactions processing . Last payments may not be included
+          Xử lý giao dịch trước đó. Các khoản thanh toán cuối cùng có thể không
+          được bao gồm
         </p>
         <div className="summary">
           <div className="item">
-            <div className="itemTitle">Target</div>
+            <div className="itemTitle">Mục Tiêu</div>
             <div className="itemResult positive">
               <IoIosArrowUp />
-              <div className="resultAmount">$12.4k</div>
+              <div className="resultAmount">20.000.000 đ</div>
             </div>
           </div>
           <div className="item">
-            <div className="itemTitle">Last Week</div>
+            <div className="itemTitle">Tuần Trước</div>
             <div className="itemResult positive">
               <IoIosArrowUp />
-              <div className="resultAmount ">$12.4k</div>
+              <div className="resultAmount ">32.000.000 đ</div>
             </div>
           </div>
           <div className="item">
-            <div className="itemTitle">Last Month</div>
+            <div className="itemTitle"> Tháng Trước</div>
             <div className="itemResult negative">
               <IoIosArrowDown />
-              <div className="resultAmount ">$12.4k</div>
+              <div className="resultAmount ">12.000.000 đ</div>
             </div>
           </div>
         </div>

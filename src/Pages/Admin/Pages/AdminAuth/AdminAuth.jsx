@@ -75,7 +75,7 @@ function AdminAuth() {
           </span>
         </div>
         <span className="err">{err && "Email or Password is incorrect"}</span>
-        <button className="btn">Sign In</button>
+        <button className="btn">Đăng Nhập</button>
       </form>
     </div>
   );

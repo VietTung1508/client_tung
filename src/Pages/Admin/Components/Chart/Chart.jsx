@@ -11,18 +11,18 @@ import {
 } from "recharts";
 
 const data = [
-  { name: "January", Total: 200 },
-  { name: "Feburary", Total: 1140 },
-  { name: "March", Total: 2800 },
-  { name: "April", Total: 1800 },
-  { name: "May", Total: 1300 },
-  { name: "June", Total: 4300 },
+  { name: "Tháng 1", Total: 100 },
+  { name: "Tháng 2", Total: 1140 },
+  { name: "Tháng 3", Total: 2800 },
+  { name: "Tháng 4", Total: 1800 },
+  { name: "Tháng 5", Total: 1300 },
+  { name: "Tháng 6", Total: 4300 },
 ];
 
 const Chart = () => {
   return (
     <div className="chart">
-      <div className="title">Last 6 Months(Revenue)</div>
+      <div className="title">Quý Vừa Qua (Doanh Thu)</div>
       <ResponsiveContainer width="100%" aspect={2 / 1}>
         <AreaChart
           width={730}

@@ -11,12 +11,15 @@ function Widget({ type }) {
   const [datas, setDatas] = useState([]);
   let data;
 
-  console.log(datas);
   useEffect(() => {
     async function getDatas() {
       const res = await axiosClient.get(
-        type !== "profit" ? `${type}/${type}s` : ""
+        type !== "profit" && type !== "product"
+          ? `${type === "user" ? "auth" : type}/${type}s`
+          : `${type}/All${type}s`
       );
+      console.log(res.data);
+
       setDatas(res.data);
     }
 
@@ -26,9 +29,9 @@ function Widget({ type }) {
   switch (type) {
     case "user":
       data = {
-        title: "USERS",
+        title: "Tài Khoản",
         isMoney: false,
-        link: "View all users",
+        link: "Xem tất cả tài khoản",
         route: "/admin/users",
         icon: (
           <FaUserFriends
@@ -43,9 +46,9 @@ function Widget({ type }) {
       break;
     case "product":
       data = {
-        title: "PRODUCTS",
+        title: "Sản Phẩm",
         isMoney: false,
-        link: "View all products",
+        link: "Xem tất cả sản phẩm",
         route: "/admin/products",
         icon: (
           <IoShirt
@@ -61,9 +64,9 @@ function Widget({ type }) {
 
     case "order":
       data = {
-        title: "ORDERS",
+        title: "Đơn Hàng",
         isMoney: false,
-        link: "View all order",
+        link: "Xem tất cả đơn hàng",
         route: "/admin/orders",
         icon: (
           <IoReceipt
@@ -79,9 +82,9 @@ function Widget({ type }) {
 
     case "profit":
       data = {
-        title: "PROFIT",
+        title: "Doanh Thu",
         isMoney: true,
-        link: "View net profit",
+        link: "Xem Doanh Thu",
         route: "/admin/profit",
         icon: (
           <GiReceiveMoney

@@ -21,64 +21,63 @@ function Sidebar() {
     <div className="admin_sidebar">
       <div className="top">
         <Link to="/admin">
-          <span className="logo">VTadmin</span>
+          <img className="logo" src="images/logo.png" alt="" />
         </Link>
       </div>
       <hr />
       <div className="center">
         <ul>
-          <p className="title">MAIN</p>
+          <p className="title">Trang Chính</p>
           <Link to="/admin">
             <li>
               <MdDashboard className="icon" />
-              <span>Dashboard</span>
+              <span>Bảng Thống Kê</span>
             </li>
           </Link>
-          <p className="title">LISTS</p>
+          <p className="title">Danh Sách</p>
           <Link to="/admin/users">
             <li>
               <FaUserFriends className="icon" />
-              <span>Users</span>
+              <span>Tài Khoản</span>
             </li>
           </Link>
           <Link to="/admin/products">
             <li>
               <IoShirtSharp className="icon" />
-              <span>Products</span>
+              <span>Sản Phẩm</span>
             </li>
           </Link>
           <Link to="/admin/categories">
             <li>
               <BiSolidCategory className="icon" />
-              <span>Categories</span>
+              <span>Danh Mục</span>
             </li>
           </Link>
           <Link to="/admin/coupons">
             <li>
               <RiCoupon2Fill className="icon" />
-              <span>Coupons</span>
+              <span>Mã Giảm Giá</span>
             </li>
           </Link>
           <Link to="/admin/orders">
             <li>
               <IoReceiptSharp className="icon" />
-              <span>Orders</span>
+              <span>Đơn Hàng</span>
             </li>
           </Link>
           <p className="title">ADMIN</p>
           <Link to="/admin/profile">
             <li>
               <FaUserCircle className="icon" />
-              <span>Profile</span>
+              <span>Thông Tin</span>
             </li>
           </Link>
           <li onClick={handleLogout}>
             <IoLogOut className="icon" />
-            <span>Logout</span>
+            <span>Đăng Xuất</span>
           </li>
         </ul>
       </div>
-      
     </div>
   );
 }

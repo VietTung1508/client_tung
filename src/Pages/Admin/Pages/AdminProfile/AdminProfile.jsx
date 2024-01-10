@@ -47,11 +47,11 @@ const AdminProfile = () => {
 
   return (
     <div className="profile-setting">
-      <h1>Admin Profile</h1>
+      <h1>Thông Tin Admin</h1>
       <div className="profile-setting-img">
-        <h5>Avatar</h5>
+        <h5>Ảnh Đại Diện</h5>
         <div className="setting-img-wrapper">
-          <img src="https://i.pinimg.com/236x/f7/ea/ed/f7eaedf50f3b7d6028599a6200b1417a.jpg" />
+          <img src={admin.admin.image} />
         </div>
       </div>
       <form className="profile-setting-info" onSubmit={handleEditProfile}>
@@ -67,7 +67,7 @@ const AdminProfile = () => {
           />
         </div>
         <div className="profile-setting-email">
-          <label htmlFor="email">email</label>
+          <label htmlFor="email">Email</label>
           <input
             type="text"
             name="email"
@@ -79,10 +79,10 @@ const AdminProfile = () => {
         </div>
         <div className="profile-setting-actions">
           <button className="btn-reset" onClick={handleReset}>
-            Reset
+            Làm mới
           </button>
           <button className="btn-save" type="submit">
-            Save
+            Lưu
           </button>
         </div>
       </form>

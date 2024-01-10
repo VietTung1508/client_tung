@@ -76,12 +76,12 @@ const EditProductModal = (props) => {
   return (
     <div className="product-edit-modal-wrapper">
       <div className="product-edit-modal">
-        <h1>Edit Product</h1>
+        <h1>Sửa Sản Phẩm</h1>
         <form className="product-edit-form" onSubmit={handleUpdate}>
           <div className="form-box">
             <div className="form-box-info">
               <div className="form-box-info-item">
-                <label htmlFor="title">Title</label>
+                <label htmlFor="title">Tiêu đề</label>
                 <input
                   type="text"
                   name="title"
@@ -92,7 +92,7 @@ const EditProductModal = (props) => {
                 />
               </div>
               <div className="form-box-info-item">
-                <label htmlFor="category">Category</label>
+                <label htmlFor="category">Danh mục</label>
                 <select
                   name="category"
                   value={value.category}
@@ -118,7 +118,7 @@ const EditProductModal = (props) => {
                       onChange={() => handleSizeChange("Small")}
                       placeholder="Enter Product Name"
                     />
-                    <label htmlFor="s">Small</label>
+                    <label htmlFor="s">S</label>
                   </div>
                   <div className="inpWrapperSize">
                     <input
@@ -129,7 +129,7 @@ const EditProductModal = (props) => {
                       onChange={() => handleSizeChange("Medium")}
                       placeholder="Enter Product Name"
                     />
-                    <label htmlFor="m">Medium</label>
+                    <label htmlFor="m">M</label>
                   </div>
                   <div className="inpWrapperSize">
                     <input
@@ -140,7 +140,7 @@ const EditProductModal = (props) => {
                       onChange={() => handleSizeChange("Large")}
                       placeholder="Enter Product Name"
                     />
-                    <label htmlFor="l">Large</label>
+                    <label htmlFor="l">L</label>
                   </div>
                   <div className="inpWrapperSize">
                     <input
@@ -151,12 +151,12 @@ const EditProductModal = (props) => {
                       checked={selectedSizes.includes("X-Large")}
                       placeholder="Enter Product Name"
                     />
-                    <label htmlFor="xl">XLarge</label>
+                    <label htmlFor="xl">XL</label>
                   </div>
                 </div>
               </div>
               <div className="form-box-info-item ">
-                <label htmlFor="title">Color</label>
+                <label htmlFor="title">Màu</label>
                 <div className="wrapperProductColor">
                   <div className="inpWrapperColor">
                     <input
@@ -168,7 +168,7 @@ const EditProductModal = (props) => {
                       onChange={() => handleColorChange("Black")}
                       placeholder="Enter Product Name"
                     />
-                    <label htmlFor="black">Black</label>
+                    <label htmlFor="black">Đe</label>
                   </div>
                   <div className="inpWrapperColor">
                     <input
@@ -180,7 +180,7 @@ const EditProductModal = (props) => {
                       onChange={() => handleColorChange("White")}
                       placeholder="Enter Product Name"
                     />
-                    <label htmlFor="white">White</label>
+                    <label htmlFor="white">Trắng</label>
                   </div>
                   <div className="inpWrapperColor">
                     <input
@@ -192,7 +192,7 @@ const EditProductModal = (props) => {
                       onChange={() => handleColorChange("Grey")}
                       placeholder="Enter Product Name"
                     />
-                    <label htmlFor="grey">Grey</label>
+                    <label htmlFor="grey">Xám</label>
                   </div>
                   <div className="inpWrapperColor">
                     <input
@@ -204,12 +204,12 @@ const EditProductModal = (props) => {
                       onChange={() => handleColorChange("Blue")}
                       placeholder="Enter Product Name"
                     />
-                    <label htmlFor="blue">Blue</label>
+                    <label htmlFor="blue">Xanh</label>
                   </div>
                 </div>
               </div>
               <div className="form-box-info-item">
-                <label htmlFor="price">Price</label>
+                <label htmlFor="price">Giá</label>
                 <input
                   type="text"
                   name="price"
@@ -220,7 +220,7 @@ const EditProductModal = (props) => {
                 />
               </div>
               <div className="form-box-info-item">
-                <label htmlFor="price_sale">Price Sale</label>
+                <label htmlFor="price_sale">Giá giảm</label>
                 <input
                   type="text"
                   name="price_sale"
@@ -231,7 +231,7 @@ const EditProductModal = (props) => {
                 />
               </div>
               <div className="form-box-info-item">
-                <label htmlFor="isSale">Product Is Sale</label>
+                <label htmlFor="isSale">Sản phẩm được giảm gía ?</label>
                 <select
                   type="text"
                   name="isSale"
@@ -240,12 +240,12 @@ const EditProductModal = (props) => {
                   onChange={handleValue}
                   required
                 >
-                  <option value={true}>Yes</option>
-                  <option value={false}>No</option>
+                  <option value={true}>Có</option>
+                  <option value={false}>Không</option>
                 </select>
               </div>
               <div className="form-box-info-item">
-                <label htmlFor="status">Product Status</label>
+                <label htmlFor="status">Trạng thái sản phẩm</label>
                 <select
                   type="text"
                   name="status"
@@ -254,12 +254,12 @@ const EditProductModal = (props) => {
                   onChange={handleValue}
                   required
                 >
-                  <option value={true}>Sell</option>
-                  <option value={false}>Stock</option>
+                  <option value={true}>Bán</option>
+                  <option value={false}>Lưu Kho</option>
                 </select>
               </div>
               <div className="form-box-info-item">
-                <label htmlFor="desc">Description</label>
+                <label htmlFor="desc">Mô tả</label>
                 <textarea
                   type="text"
                   name="desc"
@@ -272,7 +272,7 @@ const EditProductModal = (props) => {
             </div>
             <div className="form-box-img">
               <img src={product.image.url} alt="" />
-              <p>Sorry but you cannot change the image.</p>
+              <p>Xin lỗi nhưng bạn không thể sửa ảnh.</p>
             </div>
           </div>
           <div className="product-edit-modal-actions">
@@ -282,10 +282,10 @@ const EditProductModal = (props) => {
                 className="btn-cancle"
                 type="button"
               >
-                Cancel
+                Hủy
               </button>
               <button type="submit" className="btn-save" onClick={handleUpdate}>
-                Save
+                Lưu
               </button>
             </div>
           </div>

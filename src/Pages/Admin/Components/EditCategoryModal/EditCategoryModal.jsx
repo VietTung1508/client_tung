@@ -31,12 +31,12 @@ const EditCategoryModal = (props) => {
   return (
     <div className="category-edit-modal-wrapper">
       <div className="category-edit-modal">
-        <h1>Edit Category</h1>
+        <h1>Sửa Danh Mục</h1>
         <form className="category-edit-form" onSubmit={handleUpdate}>
           <div className="form-box">
             <div className="form-box-info">
               <div className="form-box-info-item">
-                <label htmlFor="title">Title</label>
+                <label htmlFor="title">Tiêu đề</label>
                 <input
                   type="text"
                   name="title"
@@ -65,10 +65,10 @@ const EditCategoryModal = (props) => {
                 className="btn-cancle"
                 type="button"
               >
-                Cancel
+                Hủy
               </button>
               <button type="submit" className="btn-save" onClick={handleUpdate}>
-                Save
+                Lưu
               </button>
             </div>
           </div>

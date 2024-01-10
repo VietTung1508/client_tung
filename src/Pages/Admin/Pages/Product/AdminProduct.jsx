@@ -14,7 +14,7 @@ function AdminProduct() {
 
   useEffect(() => {
     async function getProducts() {
-      const res = await axiosClient.get("product/products");
+      const res = await axiosClient.get("product/allProducts");
       setProducts(res.data);
     }
 
@@ -23,10 +23,10 @@ function AdminProduct() {
 
   const columns = [
     { field: "_id", headerName: "ID", flex: 1 },
-    { field: "title", headerName: "Product Name", flex: 2 },
+    { field: "title", headerName: "Tên Sản Phẩm", flex: 2 },
     {
       field: "image",
-      headerName: "Image",
+      headerName: "Ảnh Sản Phẩm",
       flex: 2,
       renderCell: (params) => {
         return (
@@ -39,23 +39,23 @@ function AdminProduct() {
       },
     },
 
-    { field: "category", headerName: "Category", flex: 1 },
-    { field: "price", headerName: "Price", flex: 1 },
+    { field: "category", headerName: "Danh Mục", flex: 1 },
+    { field: "price", headerName: "Giá", flex: 1 },
     {
       field: "size",
       headerName: "Size",
       flex: 1,
     },
-    { field: "color", headerName: "Color", flex: 1 },
+    { field: "color", headerName: "Màu", flex: 1 },
   ];
 
   return (
     <div className="productPage">
       <div className="action">
         <div className="header">
-          <h2 className="title">Products</h2>
+          <h2 className="title">Sản Phẩm</h2>
           <h3 className="desc">
-            This website has <span>{products.length} </span>products available
+            Website này có <span>{products.length} </span>sản phẩm
           </h3>
         </div>
         <button
@@ -64,7 +64,7 @@ function AdminProduct() {
             navigate("/admin/products/new");
           }}
         >
-          New Product
+          Thêm Sản Phẩm
           <span className="icon">
             <TiPlus />
           </span>

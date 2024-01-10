@@ -13,7 +13,7 @@ function Navbar() {
     <div className="admin_navbar">
       <div className="wrapper">
         <div className="search">
-          <input type="text" placeholder="Search..." />
+          <input type="text" placeholder="Tìm Kiếm..." />
           <span className="icon">
             <BsSearch />
           </span>

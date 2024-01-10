@@ -21,6 +21,23 @@
         align-items: center;
         gap: 8px;
         cursor: pointer;
+        position: relative;
+
+        &.isCart {
+          &:hover {
+            .cart {
+              display: flex;
+            }
+          }
+        }
+
+        .cart {
+          display: none;
+          position: absolute;
+          top: 100%;
+          right: 0;
+          z-index: 999;
+        }
 
         .icon {
           width: 35px;
@@ -58,7 +75,5 @@
         }
       }
     }
-
-   
   }
 }

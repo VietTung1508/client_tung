@@ -21,18 +21,18 @@ const AdminCoupon = () => {
 
   const columns = [
     { field: "_id", headerName: "ID", flex: 1 },
-    { field: "title", headerName: "Coupon Name", flex: 2 },
-    { field: "desc", headerName: "Percentage", flex: 2 },
-    { field: "percentage", headerName: "Percentage", flex: 2 },
+    { field: "title", headerName: "Tên Mã Giảm Giá", flex: 2 },
+    { field: "desc", headerName: "Mô Tả", flex: 2 },
+    { field: "percentage", headerName: "Phần Trăm", flex: 2 },
   ];
 
   return (
     <div className="couponPage">
       <div className="action">
         <div className="header">
-          <h2 className="title">Coupons</h2>
+          <h2 className="title">Mã Giảm Giá</h2>
           <h3 className="desc">
-            This website has <span>{coupons.length} </span>coupons available
+            Website này có <span>{coupons.length} </span> mã giảm giá
           </h3>
         </div>
         <button
@@ -41,7 +41,7 @@ const AdminCoupon = () => {
             navigate("/admin/coupons/new");
           }}
         >
-          New Coupons
+          Thêm Mã Giảm Giá
           <span className="icon">
             <TiPlus />
           </span>

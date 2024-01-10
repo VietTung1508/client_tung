@@ -3,7 +3,6 @@ import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
 import App from "./App.jsx";
-import Products from "./pages/Products/Products.jsx";
 import Admin from "./Pages/Admin/Admin.jsx";
 import Dashboard from "./Pages/Admin/Pages/Dashboard/Dashboard.jsx";
 import AdminCoupon from "./Pages/Admin/Pages/Coupon/AdminCoupon.jsx";
@@ -19,8 +18,12 @@ import NewProduct from "./Pages/Admin/Pages/NewProduct/NewProduct.jsx";
 import NewCategory from "./Pages/Admin/Pages/NewCategory/NewCategory.jsx";
 import NewCoupon from "./Pages/Admin/Pages/NewCoupon/NewCoupon.jsx";
 import Auth from "./Pages/Auth/Auth.jsx";
-import FeaturedProducts from "./components/FeaturedProducts/FeaturedProducts.jsx";
+import FeaturedProducts from "./Pages/Products/Products.jsx";
 import Home from "./Pages/home/Home.jsx";
+import Account from "./Pages/Account/Account.jsx";
+import Products from "./Pages/Products/Products.jsx";
+import Cart from "./Pages/Cart/Cart.jsx";
+import Payment from "./Pages/Payment/Payment.jsx";
 
 const router = createBrowserRouter([
   {
@@ -32,12 +35,24 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: "productss",
+        path: "products",
         element: <FeaturedProducts />,
       },
       {
         path: "/products:id",
         element: <Products />,
+      },
+      {
+        path: "/account/:setting",
+        element: <Account />,
+      },
+      {
+        path: "/account",
+        element: <Account />,
+      },
+      {
+        path: "/cart",
+        element: <Cart />,
       },
     ],
   },
@@ -137,6 +152,10 @@ const router = createBrowserRouter([
   {
     path: "/auth",
     element: <Auth />,
+  },
+  {
+    path: "/payment",
+    element: <Payment />,
   },
 ]);
 ReactDOM.createRoot(document.getElementById("root")).render(

@@ -127,13 +127,13 @@ const NewProduct = () => {
           <FaArrowLeftLong />
         </Link>
         <div className="info">
-          <h3>Back to List</h3>
-          <h1>Add New Product</h1>
+          <h3>Trở Lại Danh Sách</h3>
+          <h1>Thêm Sản Phẩm</h1>
         </div>
       </div>
       <div className="newProductContainer">
         <div className="productImage">
-          <h1 className="title">Product Image</h1>
+          <h1 className="title">Ảnh Sản Phẩm</h1>
           {!productImg ? (
             <label htmlFor="image" className="upload-noImage">
               <input
@@ -146,7 +146,7 @@ const NewProduct = () => {
               <label htmlFor="image">
                 <FaCloudUploadAlt className="upload-icon" />
               </label>
-              <h3>Click on to upload image !</h3>
+              <h3>Ấn vào để thêm ảnh sản phẩm !</h3>
             </label>
           ) : (
             <Fragment>
@@ -161,10 +161,10 @@ const NewProduct = () => {
                     onInput={handlePreImage}
                   />
                   <label htmlFor="image" className="btnReplace">
-                    Replace
+                    Thay Ảnh
                   </label>
                   <button className="btnRemove" onClick={handleRemovePreImage}>
-                    Remove
+                    Xóa Ảnh
                   </button>
                 </div>
               </div>
@@ -172,10 +172,10 @@ const NewProduct = () => {
           )}
         </div>
         <div className="generalProduct">
-          <h1 className="title">General Infomation</h1>
+          <h1 className="title">Thông Tin Chung</h1>
           <form className="productForm" onSubmit={handleUploadProduct}>
             <div className="inpWrapper">
-              <label>Product Name</label>
+              <label>Tên Sản Phẩm</label>
               <input
                 required
                 name="title"
@@ -187,7 +187,7 @@ const NewProduct = () => {
               />
             </div>
             <div className="inpWrapper ">
-              <label>Product Size</label>
+              <label>Kích Cỡ</label>
               <div className="wrapperProductSize">
                 <div className="inpWrapperSize">
                   <input
@@ -253,7 +253,7 @@ const NewProduct = () => {
                     onChange={() => handleColorChange("Black")}
                     placeholder="Enter Product Name"
                   />
-                  <label htmlFor="black">Black</label>
+                  <label htmlFor="black">Đen</label>
                 </div>
                 <div className="inpWrapperColor">
                   <input

@@ -90,25 +90,25 @@ const Footer = () => {
         <div className="shopping">
           <h2>MUA SẮM</h2>
           {shopping.map((s) => (
-            <span>{s.title}</span>
+            <span key={s.title}>{s.title}</span>
           ))}
         </div>
         <div className="aboutUs">
           <h2>THÔNG TIN DOANH NGHIỆP</h2>
           {about.map((a) => (
-            <span>{a.title}</span>
+            <span key={a.title}>{a.title}</span>
           ))}
         </div>
         <div className="catalog">
           <h2>Danh Mục</h2>
           {catalog.map((c) => (
-            <span>{c.title}</span>
+            <span key={c.title}>{c.title}</span>
           ))}
         </div>
         <div className="signIn">
           <h2>TRỢ GIÚP</h2>
           {signIn.map((s) => (
-            <span>{s.title}</span>
+            <span key={s.title}>{s.title}</span>
           ))}
         </div>
       </div>

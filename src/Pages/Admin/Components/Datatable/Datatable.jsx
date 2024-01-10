@@ -103,7 +103,7 @@ const Datatable = ({
                 }
               }}
             >
-              Edit
+              Sửa
             </button>
             <button
               className="deleteBtn"
@@ -112,7 +112,7 @@ const Datatable = ({
                 setObjDeleteModal(true);
               }}
             >
-              Delete
+              Xóa
             </button>
           </div>
         );
@@ -124,8 +124,8 @@ const Datatable = ({
       {objDeleteModal && (
         <div className="post-confirm-delete-wrapper">
           <div className="post-confirm-delete-modal">
-            <h1>Are you sure?</h1>
-            <p>You cannot redo this action after delete it!</p>
+            <h1>Bạn Chắc Chứ ?</h1>
+            <p>Bạn không thể hoàn tác sau khi đã xóa sản phẩm !</p>
             <div className="actions">
               <button
                 className="btn-cancle"
@@ -133,14 +133,14 @@ const Datatable = ({
                   setObjDeleteModal(false);
                 }}
               >
-                Cancle
+                Hủy
               </button>
               <button
                 className="btn-delete"
                 type="button"
                 onClick={handleDelete}
               >
-                Delete
+                Xóa
               </button>
             </div>
           </div>
